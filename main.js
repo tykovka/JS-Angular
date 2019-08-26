@@ -1,16 +1,16 @@
 'use strict'
-//1
+//Task 1
 let Ts = 42;
 let Tf = (9 / 5) * Ts + 32;
 alert (Tf);
 
-//2
+//Task 2
 let name = "Василий";
 let admin;
 admin = name;
 alert(admin);
 
-/** 3 
+/**Task  3 
  * 100108, будет происходить приведение типов данных, число 100 станет строкой
  * 
  * 4
