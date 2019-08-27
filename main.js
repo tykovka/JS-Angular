@@ -6,7 +6,7 @@ alert (Tf);
 
 //Task 2
 let name = "Василий";
-let admin;
+let admin;c
 admin = name;
 alert(admin);
 
