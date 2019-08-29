@@ -18,16 +18,16 @@ var a = 10;
 var b = 15;
 function compare() {
   if (a > 0 && b > 0) {
-    alert(a - b);
+    console.log(a - b);
   }
   else if (a < 0 && b < 0) {
-    alert(a * b);
+    console.log(a * b);
   }
-  else if ( (a < 0 && b > 0) || (a > 0 && b < 0)) {
-   alert(a + b);
+  else {
+    console.log(a + b);
   }
 }
-compare();
+// compare();
 
 // Task 4
 // Зададим рандомное число a, 
@@ -36,8 +36,8 @@ function random(min,max) {
  var a =  min + Math.random() * (max - min);
  return Math.round(a);
 }
-var a = random(1,15);
-console.log(a);
+var a = random(1, 15);
+// console.log(a);
 var res = ' ';
 switch (a) {
   case 1 :
@@ -70,27 +70,27 @@ switch (a) {
     res = res + '14 ';
   case 15:
     res = res + '15';
-    console.log(res)
+    // console.log(res)
     break;
 }
 
 //Task 5
-function sum(a,b) {
+function sum(a, b) {
   var sum = a + b;
   return sum;
 }
 
-function diff (a,b) {
+function diff (a, b) {
   var diff = a - b;
   return diff;
 }
 
-function multip (a,b) {
+function multip (a, b) {
   var multip = a * b;
   return multip;
 }
 
-function div (a,b) {
+function div (a, b) {
   var div = a / b;
   return div;
 }
@@ -103,21 +103,21 @@ function div (a,b) {
 
 
 //Task 6
-function mathOperation(arg1, arg2, operation) {
-  switch (operation) {
-    case 'sum':
-      return sum(arg1,arg2);
-      break;
-    case 'diff':
-      return diff(arg1,arg2);
-      break;
-    case 'multip':
-      return diff(arg1,arg2);  
-      break;
-    case 'div':  
-      return div(arg1,arg2); 
-  }
-}
+// function mathOperation(arg1, arg2, operation) {
+//   switch (operation) {
+//     case 'sum':
+//       return sum(arg1,arg2);
+//       break;
+//     case 'diff':
+//       return diff(arg1,arg2);
+//       break;
+//     case 'multip':
+//       return diff(arg1,arg2);  
+//       break;
+//     case 'div':  
+//       return div(arg1,arg2); 
+//   }
+// }
 
 //Task7
 // console.log(null=== 0); //false null имеет тип object,используется для обозначения отсутствия значения у переменной,
@@ -128,12 +128,12 @@ function mathOperation(arg1, arg2, operation) {
 
 //Task 8 
 function power(val, pow) {
-  var res = val * val;
-  if (pow > 2) {
+  var res = val;
+  if (pow > 1) {
     res = val * power(val, pow - 1);
   }
   return res;
 } 
 
-var res = power(2,3);
-// console.log(res);
+var res = power(5, 3);
+console.log(res);
