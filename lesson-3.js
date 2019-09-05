@@ -14,9 +14,9 @@ while (i <= n) {
 
 //Task 2 and 3
 let cart =[
-  ['Куртка',1,5000],
-  ['Шапка',1,800],
-  ['Носки',5,300]
+  ['Куртка', 1 , 5000],
+  ['Шапка', 1 ,800],
+  ['Носки', 5 ,300]
 ]
 
 let count = 0;
@@ -27,12 +27,12 @@ function countBasketPrice(arr) {
   }
   return count;
 }
-countBasketPrice(cart)
+
 
 //Task 4
-for (var i = 0; i < 10; console.log(i++)) {
-}
+// for (var i = 0; i < 10; console.log(i++)) {
+// }
 
-//Task 5
-for (var str = ''; str.length < 5; console.log(str += '+')) {
-}
+// //Task 5
+// for (var str = ''; str.length < 5; console.log(str += '+')) {
+// }
