@@ -42,17 +42,32 @@ var res = 0;
 cart.forEach(el => res += el.count * el.cost);
 
 
-//допзадача
-function conjugation (num, form1, form2, form3 ) {
-  mod = num % 10; 
-  if (mod === 0 || num === 11) { return form3};
-  if (mod === 1 ) { return form1};
-  if (mod == 2) { return form2} 
-  if (mod > 3 && mod < 5) { return form2}
+//допзадача 1
+function conjugation(num, form1, form2, form3) {
+  mod = num % 10;
+  if (mod === 0 || num === 11) { return form3 };
+  if (mod === 1) { return form1 };
+  if (mod == 2) { return form2 }
+  if (mod > 3 && mod < 5) { return form2 }
   return form3;
- }
- 
- num = 110;
- res = conjugation (num, 'файл', 'файлa', 'файлов')
- console.log(`${num} ${res}`);
- 
+}
+
+//допзадача 2
+function toNumSystem(num) {
+  var hex = num.toString(16);
+  if (hex.length === 1) {
+    hex += '0';
+  }
+  return hex;
+}
+
+function rgbToHex(r, g, b) {
+  if ( (r < 0 || g < 0 || b < 0) || (r > 255 || g > 255 || b > 255) ) {
+    return "неверно введены числа";
+  }
+   else {
+     return res = '#' + toNumSystem(r) + toNumSystem(g) + toNumSystem(b);
+   }
+}
+
+console.log(rgbToHex(5, 20, 230));
