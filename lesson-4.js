@@ -45,15 +45,14 @@ cart.forEach(el => res += el.count * el.cost);
 //допзадача
 function conjugation (num, form1, form2, form3 ) {
   mod = num % 10; 
-  if (num % 10 === 0) { return form3};
-  if (num > 4 && num < 20) { return form3};
+  if (mod === 0 || num === 11) { return form3};
   if (mod === 1 ) { return form1};
   if (mod == 2) { return form2} 
   if (mod > 3 && mod < 5) { return form2}
   return form3;
  }
  
- num = 3199;
+ num = 110;
  res = conjugation (num, 'файл', 'файлa', 'файлов')
  console.log(`${num} ${res}`);
  
