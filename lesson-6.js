@@ -2,15 +2,17 @@ const $catalog = document.getElementById('catalog');
 
 const products = [
   {
+    img: 'img/jacket.jpeg',
     title: 'Куртка',
     count: 1,
     cost: '5000'
-
   }, {
+    img: 'img/cap.jpeg',
     title: 'Шапка',
     count: 1,
     cost: '800'
   }, {
+    img: 'img/socks.jpg',
     title: 'Носки',
     count: 1,
     cost: '300'
@@ -38,6 +40,7 @@ const updateCart = () => {
     $button.addEventListener('click', () => removeFromCart(item));
 
     for (key in item) {
+      if ( key !== 'img') {
       $row = document.createElement('span');
       $row.textContent = item[key];  
 
@@ -45,7 +48,7 @@ const updateCart = () => {
       $cartItem .appendChild($button);
       $cartWrapper.appendChild($cartItem )
       $cart.appendChild($cartWrapper);
-
+      }
     }
   });
   $sumTotal = document.createElement('p');
@@ -53,7 +56,6 @@ const updateCart = () => {
   $cart.appendChild($sumTotal);
 }
 const removeFromCart = item => {
-  console.log(item);
   cart.splice(cart.indexOf(item),1);
   updateCart();
 }
@@ -72,11 +74,20 @@ const renderCatalog = () => {
     $button.addEventListener('click', () => addToCart(product));
 
     for (key in product) {
-      $row = document.createElement('span');
-      $row.textContent = product[key];
-
-      $wrapper.appendChild($row);
-      $wrapper.appendChild($row);
+      if (key === 'img') {
+        $link = document.createElement('a');
+        $link.href = product[key]; 
+        $img = document.createElement('img');
+        $img.classList.add('image')
+        $img.src = product[key]; 
+        $link.appendChild($img);
+        $wrapper.appendChild($link);      
+      }
+      else {
+        $row = document.createElement('span');
+        $row.textContent = product[key];
+        $wrapper.appendChild($row);    
+      }
       $wrapper.appendChild($button);
       $catalog.appendChild($wrapper);
     }
@@ -87,56 +98,3 @@ const renderCatalog = () => {
 }
 
 renderCatalog();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const order = (item) => {
-//   $cart = document.createElement('div');
-//   for (key in item) {
-//     $row = document.createElement('span');
-//     $row.textContent = item[key];
-//     $cart.appendChild($row);
-//   }
-//   $catalog.appendChild($cart);
-// };
-
-// const sumOrder = () => {
-
-// }
-
-// product.forEach(el => {
-//   const valOfProduct = Object.values(el);
-
-//   $wrapper = document.createElement('div');
-//   $wrapper.classList.add('wrapper');
-
-//   $button = document.createElement('button');
-//   $button.textContent = 'Купить';
-//   $button.classList.add('button');
-//   $button.addEventListener('click', () => order(el));
-
-
-//   valOfProduct.forEach(item => {
-//     $row = document.createElement('span');
-//     $row.textContent = item;
-
-//     $wrapper.appendChild($row);
-//     $wrapper.appendChild($row);
-//     $wrapper.appendChild($button);
-//     $catalog.appendChild($wrapper);
-//   })
-// })
-
-
