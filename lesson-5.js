@@ -36,7 +36,7 @@ for (var i = 0; i < ROWS; i++) {
       }
 
     }
-    if ((i % 2 == 0 && j % 2 == 0) || (i % 2 !== 0 && j % 2 !== 0)) {
+    if (i % 2 ==  j % 2) {
       $cell.classList.add('white')
     }
     else {
@@ -85,7 +85,7 @@ function fillingCart(product) {
     $cart.textContent = "Корзина пуста"
   }
   $cart.textContent = `В корзине: ${resCount} товаров на сумму ${resSum} рублей`
-  $catalog.textContent = `Каталог: ${resName} `
+  $catalog.textContent = `Каталог: ${resName}  `
 
 }
 
