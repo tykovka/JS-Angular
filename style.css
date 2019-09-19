@@ -25,13 +25,17 @@ span {
   padding-left:20px; 
 }
 
+.btn {
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin: 10px;
+}
+
 .button {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  margin: 10px;
+
 }
 
 .cartWrapper {
@@ -46,9 +50,12 @@ span {
 .removeBtn {
   background: none;
   display: block;
-  width: 50px;
+  width: 45px;
   margin-left: auto;
   margin-right: 20px;
+  margin-bottom: 5px;
+
+  text-align: center;
 }
 
 .image {
@@ -56,4 +63,8 @@ span {
   height: 150px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class = "catalog"></div>
+  <script>
+    const goods = [
+    {
+      name: 'iPhoneX',
+      price: 70000
+    },
+    {
+      name: 'Mac',
+      price: 100000
+    }
+  ]
+
+  const renderItem = ({ name, price }) => `<div class = "item"><h3>${name}</h3><p>${price}</p></div>`;
+  const renderList = (items) => {
+    const renderedList = items.map(renderItem).join('💰');
+    document.querySelector('.catalog').innerHTML = renderedList;
+  }
+    renderList(goods);  
+  </script>
+</body>
+</html>
