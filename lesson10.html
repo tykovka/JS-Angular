@@ -11,9 +11,9 @@
   <form>
     <input type = "text" pattern="[A-Za-zА-Яа-яЁё]" required>
     <input type = "tel" pattern="(\+79[0-9]{9})" required> 
-    <input type = "email" required>
+    <input type = "email" pattern=" /(^\w+(|(\.|\-)\w+))(?=@[a-z]{2,}\.[a-z]{2,4}\b)/i" required>
     <input type = "text" required>
-    <button type="submit">Отправить</button>
+    <button>Отправить</button>
   </form>
   <script src = "lesson-10.js"></script>
 </body>
