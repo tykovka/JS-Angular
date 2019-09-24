@@ -1,0 +1,18 @@
+{
+  "users": [
+    { "id": 1, "name": "Vasya Pupkin" },
+    { "id": 2, "name": "Darth Veider" },
+    { "id": 3, "name": "Luke Skywalker" }
+  ],
+  "posts": [
+    { "id": 1, "text": "Lorem ipsum" }, 
+    { "id": 2, "text": "Lorem ipsum" }
+  ],
+  "goods": [
+    { "id": 1, "name": "iPhoneX", "price": 70000 },
+    { "id": 2, "name": "iPhone 8", "price": 50000 },
+    { "id": 3, "name": "Трусы", "price": 500 },
+    { "id": 4, "name": "Носки", "price": 100 }
+
+  ]
+}
