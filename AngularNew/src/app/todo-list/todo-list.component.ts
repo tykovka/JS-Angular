@@ -38,7 +38,11 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngOnChanges(): void {
+  ngAfterViewChecked() {
     console.log('новые задачи!')
+   }
+
+  ngOnChanges(): void {
+
   }
 }
