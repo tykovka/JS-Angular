@@ -6,6 +6,7 @@ import { TaskList, TaskStatus, TaskPriority } from './todo-list';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
+
   @Input() public tasks: TaskList[] = [
     {
       title: 'Бег 10км',
@@ -23,6 +24,11 @@ export class TodoListComponent implements OnInit {
       title: 'Посмотреть "Звездные войны"',
       status: TaskStatus.Completed,
       priority: TaskPriority.Idea
+    },
+    {
+      title: 'Посмотреть "Звездные войны"',
+      status: TaskStatus.Completed,
+      priority: TaskPriority.Idea
     }
   ];
 
@@ -32,4 +38,7 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges(): void {
+    console.log('новые задачи!')
+  }
 }
