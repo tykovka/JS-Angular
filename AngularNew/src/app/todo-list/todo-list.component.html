@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor = "let item of tasks">{{item.title}}
+    <span [ngSwitch] = "item.status">
+       <span *ngSwitchCase = "0">Не готово:(</span>
+       <span *ngSwitchCase = "1">Готово(:</span>
+       <span *ngSwitchCase = "2">Сделаю попозже\:</span>
+    </span>
+  </li>
+</ul>
+<div *ngIf = "!tasks.length"> Отдыхай, сегодня без задач!</div>
